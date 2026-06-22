@@ -7,34 +7,38 @@
 <title>Building Neuromorphic AI: From Spiking Neurons to Edge Intelligence</title>
 <meta content="Building Neuromorphic AI: From Spiking Neurons to Edge Intelligence" property="og:title"/>
 <meta content="A graduate-level guide to spiking neural networks, neuromorphic hardware, event-based sensing, and edge deployment." property="og:description"/>
-<meta content="https://neuromorphicbook.apartsin.com/images/book-cover.jpg" property="og:image"/>
-<meta content="https://neuromorphicbook.apartsin.com/" property="og:url"/>
+<meta content="https://neuromorphic.apartsin.com/images/book-cover.jpg" property="og:image"/>
+<meta content="https://neuromorphic.apartsin.com/" property="og:url"/>
 <meta content="book" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <link href="styles/book.css" rel="stylesheet"/>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
 
+/* Cover-page styles. All rules are scoped under body.cover-page so the
+   shared stylesheet (styles/book.css) keeps governing chapter pages
+   while the cover carries the dark house-cover look. */
+
 body.cover-page {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: radial-gradient(ellipse at 25% 10%, #0a1f2e 0%, #070d18 45%, #040810 100%);
-    color: #d8e8f0;
+    background: radial-gradient(ellipse at 30% 15%, #0c1e2e 0%, #080f1c 45%, #050a14 100%);
+    color: #dce5ee;
     font-family: 'Cormorant Garamond', Georgia, serif;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Sparse spike-pulse grid motif */
+/* Faint spike-pulse grid motif and vignette */
 body.cover-page::before {
     content: '';
     position: fixed;
     inset: 0;
     background:
-        repeating-linear-gradient(0deg, rgba(78, 205, 196, 0.025) 0, rgba(78, 205, 196, 0.025) 1px, transparent 1px, transparent 56px),
-        repeating-linear-gradient(90deg, rgba(78, 205, 196, 0.025) 0, rgba(78, 205, 196, 0.025) 1px, transparent 1px, transparent 56px),
-        radial-gradient(ellipse at center, transparent 35%, rgba(4, 8, 16, 0.7) 100%);
+        repeating-linear-gradient(0deg, rgba(78, 205, 196, 0.03) 0, rgba(78, 205, 196, 0.03) 1px, transparent 1px, transparent 48px),
+        repeating-linear-gradient(90deg, rgba(78, 205, 196, 0.03) 0, rgba(78, 205, 196, 0.03) 1px, transparent 1px, transparent 48px),
+        radial-gradient(ellipse at center, transparent 40%, rgba(4, 8, 16, 0.65) 100%);
     pointer-events: none;
     z-index: 1;
 }
@@ -48,9 +52,8 @@ body.cover-page .cover-wrap {
 }
 
 body.cover-page .cover-image-wrapper { margin: 0 auto 1.4rem; }
-body.cover-page .cover-image { max-width: 260px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 18px 52px rgba(0,0,0,0.6), 0 0 40px rgba(78,205,196,0.1); border: 1px solid rgba(78,205,196,0.2); display: block; margin: 0 auto; }
-@media (max-width: 600px) { body.cover-page .cover-image { max-width: 190px; } }
-
+body.cover-page .cover-image { max-width: 280px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 18px 48px rgba(0,0,0,0.55); border: 1px solid rgba(255,255,255,0.12); display: block; margin: 0 auto; }
+@media (max-width: 600px) { body.cover-page .cover-image { max-width: 200px; } }
 body.cover-page .hero {
     min-height: 88vh;
     display: flex;
@@ -91,18 +94,18 @@ body.cover-page .cover-title {
     font-weight: 700;
     font-size: clamp(2.1rem, 5.2vw, 3.4rem);
     line-height: 1.18;
-    color: #e8f4f8;
+    color: #e9f1f8;
     letter-spacing: 0.02em;
     margin: 0 0 0.55rem;
-    text-shadow: 0 0 40px rgba(78, 205, 196, 0.18), 0 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 0 0 36px rgba(78, 205, 196, 0.18), 0 2px 4px rgba(0, 0, 0, 0.45);
 }
 
 body.cover-page .cover-title .title-arc {
     display: block;
-    font-size: clamp(1.1rem, 2.8vw, 1.75rem);
+    font-size: clamp(1.15rem, 2.9vw, 1.85rem);
     font-weight: 500;
     margin-top: 0.45rem;
-    background: linear-gradient(90deg, #4ecdc4 0%, #7b9dff 40%, #c89bff 75%, #f0a030 100%);
+    background: linear-gradient(90deg, #4ecdc4 0%, #7b9dff 35%, #c89bff 70%, #f0a030 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -110,12 +113,13 @@ body.cover-page .cover-title .title-arc {
 }
 
 body.cover-page .cover-subtitle {
-    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    font-size: clamp(1.18rem, 2.7vw, 1.58rem);
     font-weight: 500;
-    color: rgba(216, 232, 240, 0.9);
-    max-width: 680px;
+    color: rgba(229, 238, 246, 0.94);
+    max-width: 660px;
     margin: 1.1rem auto 0;
     line-height: 1.5;
+    letter-spacing: 0.01em;
 }
 
 body.cover-page .cover-separator {
@@ -133,29 +137,36 @@ body.cover-page .cover-separator::after {
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(78, 205, 196, 0.4), transparent);
 }
-body.cover-page .cover-separator span { color: rgba(78, 205, 196, 0.6); font-size: 0.8rem; }
+body.cover-page .cover-separator span {
+    color: rgba(78, 205, 196, 0.6);
+    font-size: 0.8rem;
+    line-height: 1;
+}
 
 body.cover-page .cover-authors {
     margin: 0 auto;
     font-size: clamp(1rem, 2vw, 1.2rem);
-    color: rgba(216, 232, 240, 0.72);
+    color: rgba(220, 229, 238, 0.72);
     letter-spacing: 0.02em;
 }
 body.cover-page .cover-authors a {
-    color: rgba(216, 232, 240, 0.9);
+    color: rgba(229, 238, 246, 0.9);
     text-decoration: none;
     border-bottom: 1px solid rgba(78, 205, 196, 0.3);
     transition: color 0.25s, border-color 0.25s;
 }
-body.cover-page .cover-authors a:hover { color: #4ecdc4; border-bottom-color: rgba(78, 205, 196, 0.7); }
+body.cover-page .cover-authors a:hover {
+    color: #4ecdc4;
+    border-bottom-color: rgba(78, 205, 196, 0.6);
+}
 body.cover-page .cover-authors .amp { margin: 0 0.5rem; opacity: 0.45; }
 
 body.cover-page .cover-promise {
-    font-size: clamp(1.02rem, 2vw, 1.2rem);
-    color: rgba(216, 232, 240, 0.85);
-    max-width: 700px;
+    font-size: clamp(1.04rem, 2vw, 1.22rem);
+    color: rgba(220, 229, 238, 0.88);
+    max-width: 680px;
     margin: 1.7rem auto 0;
-    line-height: 1.8;
+    line-height: 1.75;
 }
 
 body.cover-page .cover-cta {
@@ -177,29 +188,44 @@ body.cover-page .btn-github {
     text-decoration: none;
     border-radius: 8px;
     padding: 0.85rem 2.1rem;
-    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
 }
 
 body.cover-page .btn-start {
-    color: #040c18;
+    color: #050c18;
     background: linear-gradient(120deg, #4ecdc4 0%, #7b9dff 55%, #c89bff 130%);
     box-shadow: 0 6px 26px rgba(78, 205, 196, 0.28);
 }
-body.cover-page .btn-start:hover { transform: translateY(-2px); box-shadow: 0 10px 34px rgba(78, 205, 196, 0.42); }
+body.cover-page .btn-start:hover,
+body.cover-page .btn-start:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 34px rgba(78, 205, 196, 0.42);
+    color: #050c18;
+}
 
 body.cover-page .btn-contents {
-    color: rgba(216, 232, 240, 0.85);
+    color: rgba(220, 229, 238, 0.85);
     border: 1px solid rgba(78, 205, 196, 0.35);
     background: transparent;
 }
-body.cover-page .btn-contents:hover { color: #e8f4f8; border-color: rgba(78, 205, 196, 0.7); background: rgba(78, 205, 196, 0.07); }
+body.cover-page .btn-contents:hover,
+body.cover-page .btn-contents:focus {
+    color: #eaf3fa;
+    border-color: rgba(78, 205, 196, 0.7);
+    background: rgba(78, 205, 196, 0.08);
+}
 
 body.cover-page .btn-github {
-    color: rgba(216, 232, 240, 0.75);
+    color: rgba(220, 229, 238, 0.75);
     border: 1px solid rgba(123, 157, 255, 0.3);
     background: transparent;
 }
-body.cover-page .btn-github:hover { color: #e8f4f8; border-color: rgba(123, 157, 255, 0.65); background: rgba(123, 157, 255, 0.07); }
+body.cover-page .btn-github:hover,
+body.cover-page .btn-github:focus {
+    color: #eaf3fa;
+    border-color: rgba(123, 157, 255, 0.65);
+    background: rgba(123, 157, 255, 0.07);
+}
 
 body.cover-page .cover-meta {
     display: flex;
@@ -208,15 +234,15 @@ body.cover-page .cover-meta {
     flex-wrap: wrap;
     margin-top: 2.4rem;
     font-size: 0.92rem;
-    color: rgba(216, 232, 240, 0.42);
+    color: rgba(220, 229, 238, 0.45);
     letter-spacing: 0.05em;
 }
 
 body.cover-page .cover-section-title {
     font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(1.2rem, 2.6vw, 1.65rem);
+    font-size: clamp(1.25rem, 2.6vw, 1.7rem);
     font-weight: 700;
-    color: #d8f0ec;
+    color: #dfeaf4;
     text-align: center;
     letter-spacing: 0.06em;
     margin: 0 0 0.4rem;
@@ -225,161 +251,180 @@ body.cover-page .cover-section-title {
 body.cover-page .cover-section-sub {
     text-align: center;
     font-style: italic;
-    color: rgba(216, 232, 240, 0.5);
+    color: rgba(220, 229, 238, 0.55);
     font-size: 1.02rem;
     margin: 0 0 2rem;
 }
 
-/* ── Part grid: 13-part layout ── */
 body.cover-page .parts-section { padding: 2.5rem 0 1.5rem; }
+
 body.cover-page .part-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.1rem;
 }
 
 body.cover-page .part-card {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    background: rgba(10, 20, 36, 0.75);
+    background: rgba(16, 30, 48, 0.72);
     border: 1px solid rgba(78, 205, 196, 0.13);
     border-radius: 12px;
-    padding: 1.4rem 1.3rem 1.2rem;
+    padding: 1.5rem 1.4rem 1.3rem;
     color: inherit;
     transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
 body.cover-page .part-card:hover,
 body.cover-page .part-card:focus {
     transform: translateY(-4px);
-    border-color: rgba(78, 205, 196, 0.45);
-    box-shadow: 0 14px 36px rgba(0,0,0,0.5);
+    border-color: rgba(78, 205, 196, 0.5);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
 }
+body.cover-page .part-card.part-1:hover, body.cover-page .part-card.part-1:focus { border-color: #4ecdc4; }
+body.cover-page .part-card.part-2:hover, body.cover-page .part-card.part-2:focus { border-color: #7b9dff; }
+body.cover-page .part-card.part-3:hover, body.cover-page .part-card.part-3:focus { border-color: #c89bff; }
+body.cover-page .part-card.part-4:hover, body.cover-page .part-card.part-4:focus { border-color: #f0a030; }
 
-/* Part accent colours (cycling through 13 parts) */
-body.cover-page .part-card.p1 { --acc: #4ecdc4; }
-body.cover-page .part-card.p2 { --acc: #7b9dff; }
-body.cover-page .part-card.p3 { --acc: #c89bff; }
-body.cover-page .part-card.p4 { --acc: #f0a030; }
-body.cover-page .part-card.p5 { --acc: #4ecdc4; }
-body.cover-page .part-card.p6 { --acc: #7b9dff; }
-body.cover-page .part-card.p7 { --acc: #c89bff; }
-body.cover-page .part-card.p8 { --acc: #f0a030; }
-body.cover-page .part-card.p9 { --acc: #4ecdc4; }
-body.cover-page .part-card.p10 { --acc: #7b9dff; }
-body.cover-page .part-card.p11 { --acc: #c89bff; }
-body.cover-page .part-card.p12 { --acc: #f0a030; }
-body.cover-page .part-card.p13 { --acc: #4ecdc4; border-color: rgba(78,205,196,0.28); background: rgba(10, 30, 26, 0.8); }
-body.cover-page .part-card:hover { border-color: var(--acc, rgba(78,205,196,0.45)) !important; }
-
-body.cover-page .part-roman {
+body.cover-page .part-card .part-roman {
     font-family: 'Cinzel', Georgia, serif;
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1;
-    color: var(--acc, #4ecdc4);
-    margin-bottom: 0.5rem;
+    color: #4ecdc4;
+    margin-bottom: 0.55rem;
 }
+body.cover-page .part-card.part-1 .part-roman { color: #4ecdc4; }
+body.cover-page .part-card.part-2 .part-roman { color: #7b9dff; }
+body.cover-page .part-card.part-3 .part-roman { color: #c89bff; }
+body.cover-page .part-card.part-4 .part-roman { color: #f0a030; }
 
 body.cover-page .part-card h3 {
     font-family: 'Cinzel', Georgia, serif;
-    font-size: 0.98rem;
+    font-size: 1.0rem;
     font-weight: 700;
-    color: #e8f4f8;
-    margin: 0 0 0.5rem;
+    color: #e9f1f8;
+    margin: 0 0 0.55rem;
     line-height: 1.35;
 }
 
 body.cover-page .part-card p {
-    font-size: 0.93rem;
-    color: rgba(216, 232, 240, 0.68);
-    line-height: 1.52;
-    margin: 0 0 0.85rem;
+    font-size: 0.96rem;
+    color: rgba(220, 229, 238, 0.72);
+    line-height: 1.55;
+    margin: 0 0 1rem;
     flex-grow: 1;
 }
 
-body.cover-page .part-count {
+body.cover-page .part-card .part-count {
     font-family: 'Cinzel', Georgia, serif;
-    font-size: 0.7rem;
+    font-size: 0.74rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: var(--acc, #4ecdc4);
-    opacity: 0.85;
+    color: rgba(78, 205, 196, 0.8);
 }
+body.cover-page .part-card.part-1 .part-count { color: #4ecdc4; }
+body.cover-page .part-card.part-2 .part-count { color: #7b9dff; }
+body.cover-page .part-card.part-3 .part-count { color: #c89bff; }
+body.cover-page .part-card.part-4 .part-count { color: #f0a030; }
 
-/* ── Teaches section ── */
+body.cover-page .series-section { padding: 3rem 0 1.5rem; }
+body.cover-page .series-card { cursor: default; }
+body.cover-page .series-card:hover { transform: none; }
+body.cover-page .series-card .series-arc {
+    font-size: 0.95rem;
+    color: rgba(220, 229, 238, 0.7);
+    line-height: 1.5;
+    margin: 0 0 1rem;
+    flex-grow: 1;
+}
+body.cover-page .series-card .series-links {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 0.74rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+body.cover-page .series-card .series-links a {
+    color: #4ecdc4;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+body.cover-page .series-card.part-1 .series-links a { color: #4ecdc4; }
+body.cover-page .series-card.part-2 .series-links a { color: #7b9dff; }
+body.cover-page .series-card.part-3 .series-links a { color: #c89bff; }
+body.cover-page .series-card.part-4 .series-links a { color: #f0a030; }
+body.cover-page .series-card .series-links a:hover { border-bottom-color: #4ecdc4; }
+body.cover-page .series-card.part-1 .series-links a:hover { border-bottom-color: #4ecdc4; }
+body.cover-page .series-card.part-2 .series-links a:hover { border-bottom-color: #7b9dff; }
+body.cover-page .series-card.part-3 .series-links a:hover { border-bottom-color: #c89bff; }
+body.cover-page .series-card.part-4 .series-links a:hover { border-bottom-color: #f0a030; }
+body.cover-page .series-card .series-here {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #4ecdc4;
+}
+body.cover-page .series-card.part-1 .series-here { color: #4ecdc4; }
+body.cover-page .series-card.part-2 .series-here { color: #7b9dff; }
+body.cover-page .series-card.part-3 .series-here { color: #c89bff; }
+body.cover-page .series-card.part-4 .series-here { color: #f0a030; }
+body.cover-page .series-cta {
+    text-align: center;
+    margin-top: 1.6rem;
+    font-size: 1rem;
+    color: rgba(220, 229, 238, 0.7);
+}
+body.cover-page .series-cta a {
+    color: #4ecdc4;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(78, 205, 196, 0.3);
+}
+body.cover-page .series-cta a:hover { border-bottom-color: rgba(78, 205, 196, 0.7); }
+
 body.cover-page .teaches-section { padding: 3rem 0 2rem; }
+
 body.cover-page .teach-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 1rem;
 }
+
 body.cover-page .teach-item {
-    background: rgba(10, 20, 36, 0.5);
+    background: rgba(16, 30, 48, 0.5);
     border: 1px solid rgba(78, 205, 196, 0.1);
     border-radius: 10px;
-    padding: 1.1rem 1rem;
+    padding: 1.15rem 1.1rem;
 }
+
 body.cover-page .teach-item .teach-glyph {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     line-height: 1;
     display: block;
     margin-bottom: 0.5rem;
     color: #4ecdc4;
 }
+
 body.cover-page .teach-item h3 {
     font-family: 'Cinzel', Georgia, serif;
-    font-size: 0.83rem;
+    font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #d8f0ec;
-    margin: 0 0 0.4rem;
+    color: #dfeaf4;
+    margin: 0 0 0.45rem;
 }
+
 body.cover-page .teach-item p {
-    font-size: 0.92rem;
-    color: rgba(216, 232, 240, 0.65);
+    font-size: 0.95rem;
+    color: rgba(220, 229, 238, 0.68);
     line-height: 1.5;
     margin: 0;
 }
-
-/* ── Series section ── */
-body.cover-page .series-section { padding: 3rem 0 2rem; }
-body.cover-page .series-card { cursor: default; }
-body.cover-page .series-card:hover { transform: none; }
-body.cover-page .series-arc {
-    font-size: 0.95rem;
-    color: rgba(216, 232, 240, 0.7);
-    line-height: 1.5;
-    margin: 0 0 1rem;
-    flex-grow: 1;
-}
-body.cover-page .series-links {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 0.72rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-body.cover-page .series-links a {
-    color: var(--acc, #4ecdc4);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
-}
-body.cover-page .series-links a:hover { border-bottom-color: var(--acc, #4ecdc4); }
-body.cover-page .series-here {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: #4ecdc4;
-}
-body.cover-page .series-cta { text-align: center; margin-top: 1.5rem; font-size: 1rem; color: rgba(216,232,240,0.65); }
-body.cover-page .series-cta a { color: #4ecdc4; text-decoration: none; border-bottom: 1px solid rgba(78,205,196,0.3); }
-body.cover-page .series-cta a:hover { border-bottom-color: rgba(78,205,196,0.7); }
 
 body.cover-page footer.cover-footer {
     position: relative;
@@ -387,31 +432,33 @@ body.cover-page footer.cover-footer {
     text-align: center;
     padding: 2.5rem 1.5rem 2.2rem;
     margin-top: 2rem;
-    border-top: 1px solid rgba(78, 205, 196, 0.1);
-    color: rgba(216, 232, 240, 0.4);
+    border-top: 1px solid rgba(78, 205, 196, 0.12);
+    color: rgba(220, 229, 238, 0.45);
     font-size: 0.9rem;
+    background: transparent;
 }
 body.cover-page footer.cover-footer p { margin: 0 0 0.3rem; text-align: center; }
 body.cover-page footer.cover-footer .footer-title {
     font-family: 'Cinzel', Georgia, serif;
     font-size: 0.82rem;
     letter-spacing: 0.1em;
-    color: rgba(216, 232, 240, 0.5);
+    color: rgba(220, 229, 238, 0.55);
 }
-body.cover-page footer.cover-footer a { color: rgba(78, 205, 196, 0.7); text-decoration: none; }
+body.cover-page footer.cover-footer a {
+    color: rgba(78, 205, 196, 0.75);
+    text-decoration: none;
+}
 body.cover-page footer.cover-footer a:hover { color: #4ecdc4; }
 </style>
+<script defer="" src="scripts/book.js"></script>
 </head>
 <body class="cover-page">
 
 <div class="cover-wrap">
 
 <header class="hero">
-<span class="edition-pill">First Edition &middot; 2026</span>
-<div class="cover-image-wrapper">
-  <img alt="Book cover: luminous spiking neuron filaments and sparse event pulses bridging biology and silicon chip hardware against a deep space background"
-       class="cover-image" src="images/book-cover.jpg" width="900" height="1600"/>
-</div>
+<span class="edition-pill">First Edition &#183; 2026</span>
+<div class="cover-image-wrapper"><img alt="Book cover: luminous spiking neuron filaments and sparse event pulses bridging biology and silicon chip hardware against a deep space background" class="cover-image" height="1600" src="images/book-cover.jpg" width="900"/></div>
 <h1 class="cover-title">Building Neuromorphic AI
 <span class="title-arc">From Spiking Neurons to Edge Intelligence</span></h1>
 <p class="cover-subtitle">A graduate-level guide to spiking neural networks, neuromorphic hardware, event-based sensing, and edge deployment.</p>
@@ -421,10 +468,10 @@ body.cover-page footer.cover-footer a:hover { color: #4ecdc4; }
 <span class="amp">&amp;</span>
 <a href="#">Yehudit Aperstein, Ph.D.</a>
 </p>
-<p class="cover-promise">Intelligence does not have to be dense, synchronous, or power-hungry. This book builds neuromorphic AI from first principles — from the mathematics of spiking neurons through full-scale hardware deployment. It covers the theory, algorithms, hardware architectures, event-based sensors, and software engineering discipline that define the field, tracing every concept from plain-language intuition through formal models and version-pinned runnable code. The result is a complete map of a field that is reshaping how AI operates at the edge.</p>
+<p class="cover-promise">Intelligence does not have to be dense, synchronous, or power-hungry. This book builds neuromorphic AI from first principles: from the mathematics of spiking neurons through full-scale hardware deployment. It covers the theory, algorithms, hardware architectures, event-based sensors, and software engineering discipline that define the field, tracing every concept from plain-language intuition through formal models and version-pinned runnable code. The result is a complete map of a field that is reshaping how AI operates at the edge of the physical world.</p>
 <nav aria-label="Primary" class="cover-cta">
 <a class="btn-start" href="toc.html">Table of Contents</a>
-<a class="btn-contents" href="toc.html#part-xiii">Part XIII: Software Stack</a>
+<a class="btn-contents" href="toc.html#part-xiii">Software Stack (Part XIII)</a>
 <a class="btn-github" href="https://github.com/ApartsinProjects/NeuromorphicAI" target="_blank" rel="noopener">GitHub</a>
 </nav>
 <div class="cover-meta">
@@ -437,98 +484,98 @@ body.cover-page footer.cover-footer a:hover { color: #4ecdc4; }
 
 <section aria-labelledby="parts-heading" class="parts-section">
 <h2 class="cover-section-title" id="parts-heading">Thirteen Parts, One Continuous Build</h2>
-<p class="cover-section-sub">From the first spike to a deployed edge system — every part stands on the one before it.</p>
+<p class="cover-section-sub">From the first spike to a deployed edge system &mdash; each part stands on the one before it.</p>
 <div class="part-grid">
 
-<a class="part-card p1" href="toc.html#part-i">
+<a class="part-card part-1" href="toc.html#part-i">
 <span class="part-roman">I</span>
 <h3>Foundations of Neuromorphic AI</h3>
-<p>What neuromorphic AI is, why energy and sparsity matter, the ANN-to-SNN continuum, and biological motivation. Hype calibration from the first chapter.</p>
+<p>What neuromorphic AI is, why energy and sparsity matter, and how it relates to conventional deep learning. Hype calibration from chapter one.</p>
 <span class="part-count">Ch. 1&ndash;5</span>
 </a>
 
-<a class="part-card p2" href="toc.html#part-ii">
+<a class="part-card part-2" href="toc.html#part-ii">
 <span class="part-roman">II</span>
-<h3>Mathematical Foundations of Neural Dynamics</h3>
-<p>Dynamical systems, fixed points, stability, F-I curves, and population models — the mathematical bedrock for everything that fires.</p>
+<h3>Mathematical Foundations</h3>
+<p>Dynamical systems, fixed points, F-I curves, and population models: the mathematical bedrock for everything that fires.</p>
 <span class="part-count">Ch. 6</span>
 </a>
 
-<a class="part-card p3" href="toc.html#part-iii">
+<a class="part-card part-3" href="toc.html#part-iii">
 <span class="part-roman">III</span>
 <h3>Spiking Neuron Models</h3>
-<p>LIF, Hodgkin-Huxley, Izhikevich, AdEx, synaptic dynamics, stochastic spiking, and spike-train statistics.</p>
+<p>LIF, Hodgkin&ndash;Huxley, Izhikevich, AdEx, synaptic dynamics, stochastic spiking, and spike-train statistics.</p>
 <span class="part-count">Ch. 7&ndash;11</span>
 </a>
 
-<a class="part-card p4" href="toc.html#part-iv">
+<a class="part-card part-4" href="toc.html#part-iv">
 <span class="part-roman">IV</span>
 <h3>Neural Coding</h3>
-<p>Rate, temporal, phase, and population coding; encoding real-world data into spike trains; sparse and predictive coding.</p>
+<p>Rate, temporal, phase, and population coding. Encoding real-world data into spike trains; sparse and predictive coding.</p>
 <span class="part-count">Ch. 12&ndash;15</span>
 </a>
 
-<a class="part-card p5" href="toc.html#part-v">
+<a class="part-card part-1" href="toc.html#part-v">
 <span class="part-roman">V</span>
-<h3>Spiking Neural Network Architectures</h3>
+<h3>SNN Architectures</h3>
 <p>Feedforward, recurrent, convolutional, reservoir, generative, graph SNNs, and hyperdimensional computing.</p>
 <span class="part-count">Ch. 16&ndash;21, 64</span>
 </a>
 
-<a class="part-card p6" href="toc.html#part-vi">
+<a class="part-card part-2" href="toc.html#part-vi">
 <span class="part-roman">VI</span>
-<h3>Learning in Spiking Neural Networks</h3>
-<p>STDP, supervised spike-timing, surrogate gradients, normalization, ANN-SNN conversion, deep training, e-prop, RL, continual learning, compression, and deployment.</p>
+<h3>Learning in SNNs</h3>
+<p>STDP, surrogate gradients, e-prop, ANN-SNN conversion, reversible training, RL, continual learning, compression, and deployment.</p>
 <span class="part-count">Ch. 22&ndash;31, 65&ndash;67</span>
 </a>
 
-<a class="part-card p7" href="toc.html#part-vii">
+<a class="part-card part-3" href="toc.html#part-vii">
 <span class="part-roman">VII</span>
 <h3>Neuromorphic Hardware</h3>
-<p>Why specialized hardware, digital chips (Loihi 2, SpiNNaker2, Hala Point), analog systems, memristive devices, AER, FPGAs/ASICs, and hardware&ndash;software co-design.</p>
+<p>Loihi 2, Hala Point (1.15B neurons), SpiNNcloud, Innatera, Akida, analog systems, memristors, FPGAs, and co-design.</p>
 <span class="part-count">Ch. 32&ndash;38</span>
 </a>
 
-<a class="part-card p8" href="toc.html#part-viii">
+<a class="part-card part-4" href="toc.html#part-viii">
 <span class="part-roman">VIII</span>
 <h3>Event-Based Sensing</h3>
-<p>Event cameras, event-vision algorithms, stereo and 3D perception, neuromorphic audio, and tactile &amp; multimodal sensing.</p>
+<p>Event cameras, event-vision algorithms, stereo and 3D perception, neuromorphic audio, and tactile sensing.</p>
 <span class="part-count">Ch. 39&ndash;43</span>
 </a>
 
-<a class="part-card p9" href="toc.html#part-ix">
+<a class="part-card part-1" href="toc.html#part-ix">
 <span class="part-roman">IX</span>
-<h3>Neuromorphic AI Applications</h3>
-<p>Edge AI, robotics and autonomous systems, biomedical monitoring, industrial IoT, and combinatorial optimization on neuromorphic hardware.</p>
+<h3>Applications</h3>
+<p>Edge AI, robotics, biomedical monitoring, industrial IoT, autonomous vehicles, and combinatorial optimization.</p>
 <span class="part-count">Ch. 44&ndash;48, 68</span>
 </a>
 
-<a class="part-card p10" href="toc.html#part-x">
+<a class="part-card part-2" href="toc.html#part-x">
 <span class="part-roman">X</span>
-<h3>Hybrid Neuromorphic &amp; Deep Learning</h3>
-<p>ANN-SNN hybrids, Neural ODEs and liquid time-constant networks, spiking Transformers and SSMs (86.2% ImageNet SOTA), and spiking foundation models.</p>
+<h3>Hybrid &amp; Foundation Models</h3>
+<p>ANN-SNN hybrids, spiking Transformers (86.2% ImageNet SOTA), SpikingSSMs, SpikeLLM, SpikingBrain-76B, SpikeMLLM.</p>
 <span class="part-count">Ch. 49&ndash;52</span>
 </a>
 
-<a class="part-card p11" href="toc.html#part-xi">
+<a class="part-card part-3" href="toc.html#part-xi">
 <span class="part-roman">XI</span>
-<h3>Evaluation and Benchmarking</h3>
-<p>Metrics, datasets, NeuroBench 2.x, fair energy measurement, the SNN accuracy gap, and explainability of spiking models.</p>
+<h3>Evaluation &amp; Benchmarking</h3>
+<p>Metrics, NeuroBench 2.x, fair energy measurement, the SNN accuracy gap, and explainability of spiking models.</p>
 <span class="part-count">Ch. 53&ndash;56, 69</span>
 </a>
 
-<a class="part-card p12" href="toc.html#part-xii">
+<a class="part-card part-4" href="toc.html#part-xii">
 <span class="part-roman">XII</span>
 <h3>Research Frontiers</h3>
-<p>On-chip learning, scaling to billions of neurons, computational neuroscience, security, theory, neuromorphic photonics, and future directions.</p>
+<p>On-chip learning, scaling to billions of neurons, security, theory, neuromorphic photonics, and future directions.</p>
 <span class="part-count">Ch. 57&ndash;63</span>
 </a>
 
-<a class="part-card p13" href="toc.html#part-xiii">
+<a class="part-card part-1" href="toc.html#part-xiii">
 <span class="part-roman">XIII</span>
-<h3>The Neuromorphic AI Software Stack</h3>
-<p>Framework selection, NIR cross-backend interoperability, performance engineering, reproducible research workflows, AI-assisted development, a recipe cookbook, and an end-to-end capstone.</p>
-<span class="part-count">Ch. 70&ndash;76 &middot; Practitioner spine</span>
+<h3>The Software Stack</h3>
+<p>Framework selection, NIR interoperability, performance engineering, reproducibility, AI-assisted development, cookbook, and capstone. The practitioner spine.</p>
+<span class="part-count">Ch. 70&ndash;76</span>
 </a>
 
 </div>
@@ -542,13 +589,13 @@ body.cover-page footer.cover-footer a:hover { color: #4ecdc4; }
 <div class="teach-item">
 <span aria-hidden="true" class="teach-glyph">&#9889;</span>
 <h3>Runnable Recipes</h3>
-<p>Every chapter contains at least one version-pinned, runnable code recipe. Not a snippet — a complete, executable pipeline with expected output.</p>
+<p>Every chapter contains at least one version-pinned, runnable code recipe &mdash; a complete executable pipeline with expected output, never an isolated snippet.</p>
 </div>
 
 <div class="teach-item">
 <span aria-hidden="true" class="teach-glyph">&#128260;</span>
 <h3>Hype Calibration</h3>
-<p>Boxes throughout the book teach readers to trace claims to primary sources. "1000&times; energy reduction" is not accepted without verified benchmarks and a real hardware comparison.</p>
+<p>Boxes throughout the book teach readers to trace claims to primary sources. &ldquo;1000&times; energy reduction&rdquo; is not accepted without verified benchmarks and a real hardware comparison.</p>
 </div>
 
 <div class="teach-item">
@@ -560,19 +607,19 @@ body.cover-page footer.cover-footer a:hover { color: #4ecdc4; }
 <div class="teach-item">
 <span aria-hidden="true" class="teach-glyph">&#128202;</span>
 <h3>Two Reading Paths</h3>
-<p>The Researcher path builds formal depth from Part I through Part XII. The Practitioner path starts with Part XIII, pulling theory only when needed for a deployment decision.</p>
+<p>The Researcher path builds formal depth from Part I through Part XII. The Practitioner path starts with Part XIII, pulling theory only when a deployment decision requires it.</p>
 </div>
 
 <div class="teach-item">
 <span aria-hidden="true" class="teach-glyph">&#9998;</span>
 <h3>Open Problems</h3>
-<p>Each chapter closes with a curated set of open research problems, citing the specific gap in the literature — a starting point for thesis topics and research proposals.</p>
+<p>Each chapter closes with curated open research problems citing specific gaps in the literature &mdash; a starting point for thesis topics and research proposals.</p>
 </div>
 
 <div class="teach-item">
 <span aria-hidden="true" class="teach-glyph">&#9654;</span>
 <h3>Labs &amp; Projects</h3>
-<p>23 hands-on labs from single-neuron simulation to NIR cross-hardware round-trips. Five final-project tracks for both researchers and practitioners.</p>
+<p>23 hands-on labs from single-neuron simulation to NIR cross-hardware round-trips. Five final-project tracks for researchers and practitioners.</p>
 </div>
 
 </div>
@@ -580,34 +627,35 @@ body.cover-page footer.cover-footer a:hover { color: #4ecdc4; }
 
 <section aria-labelledby="series-heading" class="series-section">
 <h2 class="cover-section-title" id="series-heading">The Hands-On AI Science Series</h2>
-<p class="cover-section-sub">Building Neuromorphic AI is one of six connected books, each a deep build-it-yourself guide to a major field of AI.</p>
+<p class="cover-section-sub">Building Neuromorphic AI is one of six connected books, each a deep, build-it-yourself guide to a major field of AI.</p>
+<p class="cover-promise" style="margin-top:0;">Hands-On AI Science is a series of in-depth guides to the major fields of artificial intelligence. Every book goes deep into the theory, models, and internals, covering the classical foundations and the most recent ideas, then shows you how to build each one in Python with the modern libraries and tools that get the job done. The writing stays plain and light (illustrations, analogies, mental models, worked examples, and a little fun) without trading away rigor or coverage. Each volume is self-contained and complete enough to anchor a full course on its subject.</p>
 <div class="part-grid">
 
-<div class="part-card series-card p1">
+<div class="part-card series-card part-1">
 <h3>Building Language AI</h3>
 <p class="series-arc">From Tokens to Agents.</p>
-<span class="series-links"><a href="https://llmbook.apartsin.com" rel="noopener" target="_blank">Read online</a> &middot; <a href="https://www.amazon.com/dp/B0H1MQH23D" rel="noopener" target="_blank">Kindle</a></span>
+<span class="series-links"><a href="https://llmbook.apartsin.com" rel="noopener" target="_blank">Read online</a> &#183; <a href="https://www.amazon.com/dp/B0H1MQH23D" rel="noopener" target="_blank">Kindle</a></span>
 </div>
 
-<div class="part-card series-card p2">
+<div class="part-card series-card part-2">
 <h3>Building Vision AI</h3>
 <p class="series-arc">From Pixels to Generative Models.</p>
-<span class="series-links"><a href="https://visionbook.apartsin.com" rel="noopener" target="_blank">Read online</a> &middot; <a href="https://www.amazon.com/dp/B0H5BT8Y75" rel="noopener" target="_blank">Kindle</a></span>
+<span class="series-links"><a href="https://visionbook.apartsin.com" rel="noopener" target="_blank">Read online</a> &#183; <a href="https://www.amazon.com/dp/B0H5BT8Y75" rel="noopener" target="_blank">Kindle</a></span>
 </div>
 
-<div class="part-card series-card p3">
+<div class="part-card series-card part-3">
 <h3>Building Temporal AI</h3>
 <p class="series-arc">From Forecasting to Sequential Decision Making.</p>
-<span class="series-links"><a href="https://temporalbook.apartsin.com" rel="noopener" target="_blank">Read online</a> &middot; <a href="https://www.amazon.com/dp/B0H5KRJFCD" rel="noopener" target="_blank">Kindle</a></span>
+<span class="series-links"><a href="https://temporalbook.apartsin.com" rel="noopener" target="_blank">Read online</a> &#183; <a href="https://www.amazon.com/dp/B0H5KRJFCD" rel="noopener" target="_blank">Kindle</a></span>
 </div>
 
-<div class="part-card series-card p4">
+<div class="part-card series-card part-4">
 <h3>Building Scalable AI</h3>
 <p class="series-arc">From Big Data Algorithms to Distributed Intelligence.</p>
-<span class="series-links"><a href="https://scalablebook.apartsin.com" rel="noopener" target="_blank">Read online</a> &middot; <a href="https://www.amazon.com/dp/B0H5Q1471R" rel="noopener" target="_blank">Kindle</a></span>
+<span class="series-links"><a href="https://scalablebook.apartsin.com" rel="noopener" target="_blank">Read online</a> &#183; <a href="https://www.amazon.com/dp/B0H5Q1471R" rel="noopener" target="_blank">Kindle</a></span>
 </div>
 
-<div class="part-card series-card p5">
+<div class="part-card series-card part-1">
 <h3>Building Neuromorphic AI</h3>
 <p class="series-arc">From Spiking Neurons to Edge Intelligence.</p>
 <span class="series-here">You are here</span>
@@ -620,7 +668,7 @@ body.cover-page footer.cover-footer a:hover { color: #4ecdc4; }
 
 <footer class="cover-footer">
 <p class="footer-title">Building Neuromorphic AI: From Spiking Neurons to Edge Intelligence, First Edition</p>
-<p>&copy; 2026 Alexander Apartsin &amp; Yehudit Aperstein &middot; <a href="toc.html">Contents</a> &middot; <a href="https://github.com/ApartsinProjects/NeuromorphicAI" target="_blank" rel="noopener">GitHub</a></p>
+<p>&#169; 2026 Alexander Apartsin &amp; Yehudit Aperstein &#183; <a href="toc.html">Contents</a> &#183; <a href="https://github.com/ApartsinProjects/NeuromorphicAI" target="_blank" rel="noopener">GitHub</a></p>
 </footer>
 
 </body>
