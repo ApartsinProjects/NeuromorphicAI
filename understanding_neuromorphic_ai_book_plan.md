@@ -1,5 +1,5 @@
-# Understanding Neuromorphic AI
-## From Spiking Neurons to Intelligent Edge Systems
+# Building Neuromorphic AI
+## From Spiking Neurons to Edge Intelligence
 
 **Proposed book type:** Comprehensive graduate-level textbook with plain-language explanations, intuition, diagrams, mathematical depth, programming demonstrations, assignments, and research-oriented projects.  
 **Primary audience:** Advanced undergraduate students, graduate students, AI researchers, engineers, robotics researchers, edge-AI developers, and instructors building courses in neuromorphic computing or brain-inspired AI.  
@@ -2840,11 +2840,11 @@ Example style:
 
 ## 18. Proposed Subtitle Variants
 
-1. **Understanding Neuromorphic AI: From Spiking Neurons to Intelligent Edge Systems**
-2. **Understanding Neuromorphic AI: Event-Driven Learning for Low-Power Intelligent Systems**
-3. **Understanding Neuromorphic AI: Spikes, Sensors, Hardware, and Edge Intelligence**
-4. **Understanding Neuromorphic AI: A Practical Guide to Spiking Neural Networks and Event-Based Computing**
-5. **Understanding Neuromorphic AI: From Sparse Spikes to Autonomous Edge Systems**
+1. **Building Neuromorphic AI: From Spiking Neurons to Edge Intelligence** *(selected)*
+2. **Building Neuromorphic AI: Event-Driven Learning for Low-Power Intelligent Systems**
+3. **Building Neuromorphic AI: Spikes, Sensors, Hardware, and Edge Intelligence**
+4. **Building Neuromorphic AI: A Practical Guide to Spiking Neural Networks and Event-Based Computing**
+5. **Building Neuromorphic AI: From Sparse Spikes to Autonomous Edge Systems**
 
 Recommended subtitle:
 
@@ -2854,7 +2854,7 @@ Recommended subtitle:
 
 ## 19. Complete One-Paragraph Book Description
 
-**Understanding Neuromorphic AI: From Spiking Neurons to Intelligent Edge Systems** is a comprehensive graduate-level guide to the theory, algorithms, hardware, and applications of neuromorphic artificial intelligence. Starting from the basic idea of spikes as time-based computational events, the book develops mathematical foundations in dynamical systems, formal spiking neuron models including stochastic variants, spike coding theory, spiking neural network architectures including generative models, and a complete treatment of learning algorithms spanning STDP, surrogate gradients, eligibility traces, and knowledge distillation. Hardware coverage extends from digital neuromorphic chips and analog mixed-signal systems to memristive devices and FPGA implementations. Event-based sensing chapters cover monocular and stereo event cameras, neuromorphic audio, and tactile sensing. Applications span edge AI, robotics, biomedical monitoring, and autonomous systems. Evaluation chapters address fair energy measurement, benchmark methodology, and limitations including the accuracy gap between SNNs and ANNs. Recent developments receive full treatment, including spiking Transformers and state space models, spiking and brain-inspired large models (SpikeLLM, SpikingBrain, SpikeMLLM), reversible and temporally-efficient training, the NeuroBench evaluation standard, and 2025-2026 hardware (SpiNNcloud, Innatera, Akida, SynSense). A dedicated software part treats the field as an engineering discipline: framework selection, cross-backend interoperability through the Neuromorphic Intermediate Representation (NIR), performance engineering, reproducible workflows, AI-assisted ("vibe coding") development, an end-to-end recipe cookbook, and a deployment capstone. Each concept is explained first in plain language and then developed formally through equations, diagrams, runnable version-pinned recipes, and assignments, with Hype Calibration boxes throughout that teach students to trace claims to primary sources. The book is designed to serve both as a complete introduction to neuromorphic computing and as an advanced graduate-level and practitioner resource for students, researchers, and engineers building energy-efficient, event-driven, and brain-inspired AI systems.
+**Building Neuromorphic AI: From Spiking Neurons to Edge Intelligence** is a comprehensive graduate-level guide to the theory, algorithms, hardware, and applications of neuromorphic artificial intelligence. Starting from the basic idea of spikes as time-based computational events, the book develops mathematical foundations in dynamical systems, formal spiking neuron models including stochastic variants, spike coding theory, spiking neural network architectures including generative models, and a complete treatment of learning algorithms spanning STDP, surrogate gradients, eligibility traces, and knowledge distillation. Hardware coverage extends from digital neuromorphic chips and analog mixed-signal systems to memristive devices and FPGA implementations. Event-based sensing chapters cover monocular and stereo event cameras, neuromorphic audio, and tactile sensing. Applications span edge AI, robotics, biomedical monitoring, and autonomous systems. Evaluation chapters address fair energy measurement, benchmark methodology, and limitations including the accuracy gap between SNNs and ANNs. Recent developments receive full treatment, including spiking Transformers and state space models, spiking and brain-inspired large models (SpikeLLM, SpikingBrain, SpikeMLLM), reversible and temporally-efficient training, the NeuroBench evaluation standard, and 2025-2026 hardware (SpiNNcloud, Innatera, Akida, SynSense). A dedicated software part treats the field as an engineering discipline: framework selection, cross-backend interoperability through the Neuromorphic Intermediate Representation (NIR), performance engineering, reproducible workflows, AI-assisted ("vibe coding") development, an end-to-end recipe cookbook, and a deployment capstone. Each concept is explained first in plain language and then developed formally through equations, diagrams, runnable version-pinned recipes, and assignments, with Hype Calibration boxes throughout that teach students to trace claims to primary sources. The book is designed to serve both as a complete introduction to neuromorphic computing and as an advanced graduate-level and practitioner resource for students, researchers, and engineers building energy-efficient, event-driven, and brain-inspired AI systems.
 
 ---
 
