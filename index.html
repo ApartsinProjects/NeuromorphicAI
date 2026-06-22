@@ -23,22 +23,22 @@ body.cover-page {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: radial-gradient(ellipse at 30% 15%, #0c1e2e 0%, #080f1c 45%, #050a14 100%);
+    background: radial-gradient(ellipse at 30% 15%, #122338 0%, #0b1626 45%, #070d18 100%);
     color: #dce5ee;
     font-family: 'Cormorant Garamond', Georgia, serif;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Faint spike-pulse grid motif and vignette */
+/* Faint pixel-grid motif and vignette: pixels are where the book begins. */
 body.cover-page::before {
     content: '';
     position: fixed;
     inset: 0;
     background:
-        repeating-linear-gradient(0deg, rgba(78, 205, 196, 0.03) 0, rgba(78, 205, 196, 0.03) 1px, transparent 1px, transparent 48px),
-        repeating-linear-gradient(90deg, rgba(78, 205, 196, 0.03) 0, rgba(78, 205, 196, 0.03) 1px, transparent 1px, transparent 48px),
-        radial-gradient(ellipse at center, transparent 40%, rgba(4, 8, 16, 0.65) 100%);
+        repeating-linear-gradient(0deg, rgba(120, 170, 220, 0.035) 0, rgba(120, 170, 220, 0.035) 1px, transparent 1px, transparent 48px),
+        repeating-linear-gradient(90deg, rgba(120, 170, 220, 0.035) 0, rgba(120, 170, 220, 0.035) 1px, transparent 1px, transparent 48px),
+        radial-gradient(ellipse at center, transparent 40%, rgba(5, 9, 16, 0.65) 100%);
     pointer-events: none;
     z-index: 1;
 }
@@ -52,7 +52,7 @@ body.cover-page .cover-wrap {
 }
 
 body.cover-page .cover-image-wrapper { margin: 0 auto 1.4rem; }
-body.cover-page .cover-image { max-width: 280px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 18px 48px rgba(0,0,0,0.55); border: 1px solid rgba(255,255,255,0.12); display: block; margin: 0 auto; }
+body.cover-page .cover-image { max-width: 280px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 18px 48px rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.15); display: block; margin: 0 auto; }
 @media (max-width: 600px) { body.cover-page .cover-image { max-width: 200px; } }
 body.cover-page .hero {
     min-height: 88vh;
@@ -81,8 +81,8 @@ body.cover-page .edition-pill {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.28em;
-    color: rgba(78, 205, 196, 0.75);
-    border: 1px solid rgba(78, 205, 196, 0.22);
+    color: rgba(150, 200, 235, 0.75);
+    border: 1px solid rgba(150, 200, 235, 0.22);
     border-radius: 100px;
     padding: 0.4rem 1.3rem;
     margin-bottom: 1.6rem;
@@ -97,7 +97,7 @@ body.cover-page .cover-title {
     color: #e9f1f8;
     letter-spacing: 0.02em;
     margin: 0 0 0.55rem;
-    text-shadow: 0 0 36px rgba(78, 205, 196, 0.18), 0 2px 4px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 0 36px rgba(110, 180, 235, 0.22), 0 2px 4px rgba(0, 0, 0, 0.45);
 }
 
 body.cover-page .cover-title .title-arc {
@@ -105,11 +105,11 @@ body.cover-page .cover-title .title-arc {
     font-size: clamp(1.15rem, 2.9vw, 1.85rem);
     font-weight: 500;
     margin-top: 0.45rem;
-    background: linear-gradient(90deg, #4ecdc4 0%, #7b9dff 35%, #c89bff 70%, #f0a030 100%);
+    background: linear-gradient(90deg, #6fc6e8 0%, #9fb6f0 35%, #d99ad0 70%, #f0c27a 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #7b9dff;
+    color: #9fb6f0; /* fallback for non-supporting browsers */
 }
 
 body.cover-page .cover-subtitle {
@@ -122,6 +122,7 @@ body.cover-page .cover-subtitle {
     letter-spacing: 0.01em;
 }
 
+/* Decorative separator + author byline (LLMBook house style) */
 body.cover-page .cover-separator {
     margin: 1.6rem auto 1.1rem;
     display: flex;
@@ -135,14 +136,13 @@ body.cover-page .cover-separator::after {
     content: '';
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(78, 205, 196, 0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(150, 200, 235, 0.4), transparent);
 }
 body.cover-page .cover-separator span {
-    color: rgba(78, 205, 196, 0.6);
+    color: rgba(150, 200, 235, 0.6);
     font-size: 0.8rem;
     line-height: 1;
 }
-
 body.cover-page .cover-authors {
     margin: 0 auto;
     font-size: clamp(1rem, 2vw, 1.2rem);
@@ -152,12 +152,12 @@ body.cover-page .cover-authors {
 body.cover-page .cover-authors a {
     color: rgba(229, 238, 246, 0.9);
     text-decoration: none;
-    border-bottom: 1px solid rgba(78, 205, 196, 0.3);
+    border-bottom: 1px solid rgba(150, 200, 235, 0.3);
     transition: color 0.25s, border-color 0.25s;
 }
 body.cover-page .cover-authors a:hover {
-    color: #4ecdc4;
-    border-bottom-color: rgba(78, 205, 196, 0.6);
+    color: #7fd0ec;
+    border-bottom-color: rgba(150, 200, 235, 0.6);
 }
 body.cover-page .cover-authors .amp { margin: 0 0.5rem; opacity: 0.45; }
 
@@ -179,7 +179,7 @@ body.cover-page .cover-cta {
 
 body.cover-page .btn-start,
 body.cover-page .btn-contents,
-body.cover-page .btn-github {
+body.cover-page .btn-amazon {
     font-family: 'Cinzel', Georgia, serif;
     font-size: 0.95rem;
     font-weight: 700;
@@ -192,39 +192,39 @@ body.cover-page .btn-github {
 }
 
 body.cover-page .btn-start {
-    color: #050c18;
-    background: linear-gradient(120deg, #4ecdc4 0%, #7b9dff 55%, #c89bff 130%);
-    box-shadow: 0 6px 26px rgba(78, 205, 196, 0.28);
+    color: #081120;
+    background: linear-gradient(120deg, #7fd0ec 0%, #b6c6f4 55%, #f0c27a 130%);
+    box-shadow: 0 6px 26px rgba(110, 180, 235, 0.28);
 }
 body.cover-page .btn-start:hover,
 body.cover-page .btn-start:focus {
     transform: translateY(-2px);
-    box-shadow: 0 10px 34px rgba(78, 205, 196, 0.42);
-    color: #050c18;
+    box-shadow: 0 10px 34px rgba(110, 180, 235, 0.4);
+    color: #081120;
 }
 
 body.cover-page .btn-contents {
     color: rgba(220, 229, 238, 0.85);
-    border: 1px solid rgba(78, 205, 196, 0.35);
+    border: 1px solid rgba(150, 200, 235, 0.35);
     background: transparent;
 }
 body.cover-page .btn-contents:hover,
 body.cover-page .btn-contents:focus {
     color: #eaf3fa;
-    border-color: rgba(78, 205, 196, 0.7);
-    background: rgba(78, 205, 196, 0.08);
+    border-color: rgba(150, 200, 235, 0.7);
+    background: rgba(110, 180, 235, 0.08);
 }
 
-body.cover-page .btn-github {
-    color: rgba(220, 229, 238, 0.75);
-    border: 1px solid rgba(123, 157, 255, 0.3);
-    background: transparent;
+body.cover-page .btn-amazon {
+    color: #2a1a05;
+    background: linear-gradient(120deg, #f0c27a 0%, #e6a84e 100%);
+    box-shadow: 0 6px 26px rgba(230, 168, 78, 0.28);
 }
-body.cover-page .btn-github:hover,
-body.cover-page .btn-github:focus {
-    color: #eaf3fa;
-    border-color: rgba(123, 157, 255, 0.65);
-    background: rgba(123, 157, 255, 0.07);
+body.cover-page .btn-amazon:hover,
+body.cover-page .btn-amazon:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 34px rgba(230, 168, 78, 0.42);
+    color: #2a1a05;
 }
 
 body.cover-page .cover-meta {
@@ -260,7 +260,7 @@ body.cover-page .parts-section { padding: 2.5rem 0 1.5rem; }
 
 body.cover-page .part-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1.1rem;
 }
 
@@ -269,7 +269,7 @@ body.cover-page .part-card {
     flex-direction: column;
     text-decoration: none;
     background: rgba(16, 30, 48, 0.72);
-    border: 1px solid rgba(78, 205, 196, 0.13);
+    border: 1px solid rgba(150, 200, 235, 0.14);
     border-radius: 12px;
     padding: 1.5rem 1.4rem 1.3rem;
     color: inherit;
@@ -278,30 +278,34 @@ body.cover-page .part-card {
 body.cover-page .part-card:hover,
 body.cover-page .part-card:focus {
     transform: translateY(-4px);
-    border-color: rgba(78, 205, 196, 0.5);
+    border-color: rgba(150, 200, 235, 0.5);
     box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
 }
-body.cover-page .part-card.part-1:hover, body.cover-page .part-card.part-1:focus { border-color: #4ecdc4; }
-body.cover-page .part-card.part-2:hover, body.cover-page .part-card.part-2:focus { border-color: #7b9dff; }
-body.cover-page .part-card.part-3:hover, body.cover-page .part-card.part-3:focus { border-color: #c89bff; }
-body.cover-page .part-card.part-4:hover, body.cover-page .part-card.part-4:focus { border-color: #f0a030; }
+body.cover-page .part-card.part-1:hover,
+body.cover-page .part-card.part-1:focus { border-color: #6fd0cd; }
+body.cover-page .part-card.part-2:hover,
+body.cover-page .part-card.part-2:focus { border-color: #d9bd7a; }
+body.cover-page .part-card.part-3:hover,
+body.cover-page .part-card.part-3:focus { border-color: #b3a2f5; }
+body.cover-page .part-card.part-4:hover,
+body.cover-page .part-card.part-4:focus { border-color: #ef9eb4; }
 
 body.cover-page .part-card .part-roman {
     font-family: 'Cinzel', Georgia, serif;
     font-size: 2rem;
     font-weight: 700;
     line-height: 1;
-    color: #4ecdc4;
+    color: #7fd0ec;
     margin-bottom: 0.55rem;
 }
-body.cover-page .part-card.part-1 .part-roman { color: #4ecdc4; }
-body.cover-page .part-card.part-2 .part-roman { color: #7b9dff; }
-body.cover-page .part-card.part-3 .part-roman { color: #c89bff; }
-body.cover-page .part-card.part-4 .part-roman { color: #f0a030; }
+body.cover-page .part-card.part-1 .part-roman { color: #6fd0cd; }
+body.cover-page .part-card.part-2 .part-roman { color: #d9bd7a; }
+body.cover-page .part-card.part-3 .part-roman { color: #b3a2f5; }
+body.cover-page .part-card.part-4 .part-roman { color: #ef9eb4; }
 
 body.cover-page .part-card h3 {
     font-family: 'Cinzel', Georgia, serif;
-    font-size: 1.0rem;
+    font-size: 1.06rem;
     font-weight: 700;
     color: #e9f1f8;
     margin: 0 0 0.55rem;
@@ -309,7 +313,7 @@ body.cover-page .part-card h3 {
 }
 
 body.cover-page .part-card p {
-    font-size: 0.96rem;
+    font-size: 0.99rem;
     color: rgba(220, 229, 238, 0.72);
     line-height: 1.55;
     margin: 0 0 1rem;
@@ -322,14 +326,15 @@ body.cover-page .part-card .part-count {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: rgba(78, 205, 196, 0.8);
+    color: rgba(150, 200, 235, 0.8);
 }
-body.cover-page .part-card.part-1 .part-count { color: #4ecdc4; }
-body.cover-page .part-card.part-2 .part-count { color: #7b9dff; }
-body.cover-page .part-card.part-3 .part-count { color: #c89bff; }
-body.cover-page .part-card.part-4 .part-count { color: #f0a030; }
+body.cover-page .part-card.part-1 .part-count { color: #6fd0cd; }
+body.cover-page .part-card.part-2 .part-count { color: #d9bd7a; }
+body.cover-page .part-card.part-3 .part-count { color: #b3a2f5; }
+body.cover-page .part-card.part-4 .part-count { color: #ef9eb4; }
 
 body.cover-page .series-section { padding: 3rem 0 1.5rem; }
+body.cover-page .series-section .part-grid { margin-top: 2.5rem; }
 body.cover-page .series-card { cursor: default; }
 body.cover-page .series-card:hover { transform: none; }
 body.cover-page .series-card .series-arc {
@@ -347,32 +352,32 @@ body.cover-page .series-card .series-links {
     letter-spacing: 0.1em;
 }
 body.cover-page .series-card .series-links a {
-    color: #4ecdc4;
+    color: #7fd0ec;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s;
 }
-body.cover-page .series-card.part-1 .series-links a { color: #4ecdc4; }
-body.cover-page .series-card.part-2 .series-links a { color: #7b9dff; }
-body.cover-page .series-card.part-3 .series-links a { color: #c89bff; }
-body.cover-page .series-card.part-4 .series-links a { color: #f0a030; }
-body.cover-page .series-card .series-links a:hover { border-bottom-color: #4ecdc4; }
-body.cover-page .series-card.part-1 .series-links a:hover { border-bottom-color: #4ecdc4; }
-body.cover-page .series-card.part-2 .series-links a:hover { border-bottom-color: #7b9dff; }
-body.cover-page .series-card.part-3 .series-links a:hover { border-bottom-color: #c89bff; }
-body.cover-page .series-card.part-4 .series-links a:hover { border-bottom-color: #f0a030; }
+body.cover-page .series-card.part-1 .series-links a { color: #6fd0cd; }
+body.cover-page .series-card.part-2 .series-links a { color: #d9bd7a; }
+body.cover-page .series-card.part-3 .series-links a { color: #b3a2f5; }
+body.cover-page .series-card.part-4 .series-links a { color: #ef9eb4; }
+body.cover-page .series-card .series-links a:hover { border-bottom-color: #7fd0ec; }
+body.cover-page .series-card.part-1 .series-links a:hover { border-bottom-color: #6fd0cd; }
+body.cover-page .series-card.part-2 .series-links a:hover { border-bottom-color: #d9bd7a; }
+body.cover-page .series-card.part-3 .series-links a:hover { border-bottom-color: #b3a2f5; }
+body.cover-page .series-card.part-4 .series-links a:hover { border-bottom-color: #ef9eb4; }
 body.cover-page .series-card .series-here {
     font-family: 'Cinzel', Georgia, serif;
     font-size: 0.74rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: #4ecdc4;
+    color: #7fd0ec;
 }
-body.cover-page .series-card.part-1 .series-here { color: #4ecdc4; }
-body.cover-page .series-card.part-2 .series-here { color: #7b9dff; }
-body.cover-page .series-card.part-3 .series-here { color: #c89bff; }
-body.cover-page .series-card.part-4 .series-here { color: #f0a030; }
+body.cover-page .series-card.part-1 .series-here { color: #6fd0cd; }
+body.cover-page .series-card.part-2 .series-here { color: #d9bd7a; }
+body.cover-page .series-card.part-3 .series-here { color: #b3a2f5; }
+body.cover-page .series-card.part-4 .series-here { color: #ef9eb4; }
 body.cover-page .series-cta {
     text-align: center;
     margin-top: 1.6rem;
@@ -380,11 +385,11 @@ body.cover-page .series-cta {
     color: rgba(220, 229, 238, 0.7);
 }
 body.cover-page .series-cta a {
-    color: #4ecdc4;
+    color: #7fd0ec;
     text-decoration: none;
-    border-bottom: 1px solid rgba(78, 205, 196, 0.3);
+    border-bottom: 1px solid rgba(150, 200, 235, 0.3);
 }
-body.cover-page .series-cta a:hover { border-bottom-color: rgba(78, 205, 196, 0.7); }
+body.cover-page .series-cta a:hover { border-bottom-color: rgba(150, 200, 235, 0.7); }
 
 body.cover-page .teaches-section { padding: 3rem 0 2rem; }
 
@@ -396,7 +401,7 @@ body.cover-page .teach-grid {
 
 body.cover-page .teach-item {
     background: rgba(16, 30, 48, 0.5);
-    border: 1px solid rgba(78, 205, 196, 0.1);
+    border: 1px solid rgba(150, 200, 235, 0.1);
     border-radius: 10px;
     padding: 1.15rem 1.1rem;
 }
@@ -406,7 +411,7 @@ body.cover-page .teach-item .teach-glyph {
     line-height: 1;
     display: block;
     margin-bottom: 0.5rem;
-    color: #4ecdc4;
+    color: #7fd0ec;
 }
 
 body.cover-page .teach-item h3 {
@@ -432,7 +437,7 @@ body.cover-page footer.cover-footer {
     text-align: center;
     padding: 2.5rem 1.5rem 2.2rem;
     margin-top: 2rem;
-    border-top: 1px solid rgba(78, 205, 196, 0.12);
+    border-top: 1px solid rgba(150, 200, 235, 0.12);
     color: rgba(220, 229, 238, 0.45);
     font-size: 0.9rem;
     background: transparent;
@@ -445,10 +450,10 @@ body.cover-page footer.cover-footer .footer-title {
     color: rgba(220, 229, 238, 0.55);
 }
 body.cover-page footer.cover-footer a {
-    color: rgba(78, 205, 196, 0.75);
+    color: rgba(150, 200, 235, 0.75);
     text-decoration: none;
 }
-body.cover-page footer.cover-footer a:hover { color: #4ecdc4; }
+body.cover-page footer.cover-footer a:hover { color: #aedcf5; }
 </style>
 <script defer="" src="scripts/book.js"></script>
 </head>
@@ -628,7 +633,7 @@ body.cover-page footer.cover-footer a:hover { color: #4ecdc4; }
 <section aria-labelledby="series-heading" class="series-section">
 <h2 class="cover-section-title" id="series-heading">The Hands-On AI Science Series</h2>
 <p class="cover-section-sub">Building Neuromorphic AI is one of nine connected books, each a deep, build-it-yourself guide to a major field of AI.</p>
-<p class="cover-promise" style="margin-top:0;margin-bottom:2rem;">Hands-On AI Science is a series of in-depth guides to the major fields of artificial intelligence. Every book goes deep into the theory, models, and internals, covering the classical foundations and the most recent ideas, then shows you how to build each one in Python with the modern libraries and tools that get the job done. The writing stays plain and light (illustrations, analogies, mental models, worked examples, and a little fun) without trading away rigor or coverage. Each volume is self-contained and complete enough to anchor a full course on its subject.</p>
+<p class="cover-promise" style="margin-top:0;">Hands-On AI Science is a series of in-depth guides to the major fields of artificial intelligence. Every book goes deep into the theory, models, and internals, covering the classical foundations and the most recent ideas, then shows you how to build each one in Python with the modern libraries and tools that get the job done. The writing stays plain and light (illustrations, analogies, mental models, worked examples, and a little fun) without trading away rigor or coverage. Each volume is self-contained and complete enough to anchor a full course on its subject.</p>
 <div class="part-grid">
 
 <div class="part-card series-card part-1">
