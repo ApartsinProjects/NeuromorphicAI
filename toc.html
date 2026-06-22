@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Table of contents for Building Neuromorphic AI: From Spiking Neurons to Edge Intelligence." name="description"/>
+<title>Contents | Building Neuromorphic AI: From Spiking Neurons to Edge Intelligence</title>
+<link href="styles/book.css" rel="stylesheet"/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap');
+
+.toc-main { max-width: 1080px; }
+.toc-chapter { padding: 0.65rem 0.75rem; }
+.toc-chapter-head { display: grid; grid-template-columns: 2.6rem 1fr; gap: 0 0.65rem; align-items: start; margin-bottom: 0.35rem; }
+.toc-chapter-head .toc-chapter-num { margin-top: 0.1rem; }
+.toc-chapter-subtitle { display: block; font-size: 0.78rem; font-style: italic; color: #5a626c; line-height: 1.4; margin-top: 0.15rem; }
+.toc-card-link { color: inherit; text-decoration: none; }
+.toc-card-link:hover .toc-chapter-title { color: #4ecdc4; }
+.toc-part-title a { color: #ffffff; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.4); }
+.toc-part-title a:hover { color: rgba(255,255,255,0.8); }
+
+/* Part accent colours */
+.toc-part[data-part="I"]    .toc-part-header { background: linear-gradient(135deg, #0d2e2b, #1a4a45); }
+.toc-part[data-part="II"]   .toc-part-header { background: linear-gradient(135deg, #0d1f3c, #162e5a); }
+.toc-part[data-part="III"]  .toc-part-header { background: linear-gradient(135deg, #1a1030, #2e1a52); }
+.toc-part[data-part="IV"]   .toc-part-header { background: linear-gradient(135deg, #2a1a05, #4a2e08); }
+.toc-part[data-part="V"]    .toc-part-header { background: linear-gradient(135deg, #0d2e2b, #1a4a45); }
+.toc-part[data-part="VI"]   .toc-part-header { background: linear-gradient(135deg, #0d1f3c, #162e5a); }
+.toc-part[data-part="VII"]  .toc-part-header { background: linear-gradient(135deg, #1a1030, #2e1a52); }
+.toc-part[data-part="VIII"] .toc-part-header { background: linear-gradient(135deg, #2a1a05, #4a2e08); }
+.toc-part[data-part="IX"]   .toc-part-header { background: linear-gradient(135deg, #0d2e2b, #1a4a45); }
+.toc-part[data-part="X"]    .toc-part-header { background: linear-gradient(135deg, #0d1f3c, #162e5a); }
+.toc-part[data-part="XI"]   .toc-part-header { background: linear-gradient(135deg, #1a1030, #2e1a52); }
+.toc-part[data-part="XII"]  .toc-part-header { background: linear-gradient(135deg, #2a1a05, #4a2e08); }
+.toc-part[data-part="XIII"] .toc-part-header { background: linear-gradient(135deg, #0a2218, #10382a); border-left: 3px solid #4ecdc4; }
+
+.toc-part[data-part="I"]    .toc-chapter-num,
+.toc-part[data-part="V"]    .toc-chapter-num,
+.toc-part[data-part="IX"]   .toc-chapter-num  { color: #4ecdc4; background: #0d2e2b; border-color: #1a4a45; }
+.toc-part[data-part="II"]   .toc-chapter-num,
+.toc-part[data-part="VI"]   .toc-chapter-num,
+.toc-part[data-part="X"]    .toc-chapter-num  { color: #7b9dff; background: #0d1f3c; border-color: #162e5a; }
+.toc-part[data-part="III"]  .toc-chapter-num,
+.toc-part[data-part="VII"]  .toc-chapter-num,
+.toc-part[data-part="XI"]   .toc-chapter-num  { color: #c89bff; background: #1a1030; border-color: #2e1a52; }
+.toc-part[data-part="IV"]   .toc-chapter-num,
+.toc-part[data-part="VIII"] .toc-chapter-num,
+.toc-part[data-part="XII"]  .toc-chapter-num  { color: #f0a030; background: #2a1a05; border-color: #4a2e08; }
+.toc-part[data-part="XIII"] .toc-chapter-num  { color: #4ecdc4; background: #0a2218; border-color: #10382a; }
+
+.toc-draft-note { max-width: 1080px; margin: 1.25rem auto 0; padding: 0 1.5rem; font-family: sans-serif; font-size: 0.8rem; color: #5a626c; text-align: center; }
+.toc-part-note { font-family: sans-serif; font-size: 0.82rem; color: rgba(200,220,215,0.7); font-style: italic; padding: 0.4rem 1.5rem 0.8rem; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="chapter-header">
+<nav class="header-nav">
+<a class="book-title-link" href="index.html">Building Neuromorphic AI: From Spiking Neurons to Edge Intelligence</a>
+<span aria-current="page" class="toc-link" title="Table of Contents"><span class="toc-icon">&#9776;</span> Contents</span>
+</nav>
+<h1>Table of Contents</h1>
+<p class="chapter-subtitle">A graduate-level guide to spiking neural networks, neuromorphic hardware, event-based sensing, and edge deployment.</p>
+<p class="chapter-subtitle">First Edition &middot; 2026</p>
+</header>
+<p class="toc-draft-note">13 parts &middot; 76 chapters &middot; 5 appendices. Chapters are listed in reading order; Part XIII (Ch. 70&ndash;76) is the practitioner software spine and can also be read first.</p>
+<main class="content toc-main" id="main-content">
+
+<!-- ── PART I ── -->
+<section class="toc-part" data-part="I" id="part-i">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part I</span> <span class="toc-part-sep">&middot;</span> Foundations of Neuromorphic AI</h2>
+<span class="toc-part-count">Ch. 1&ndash;5 &middot; 5 chapters</span>
+<p class="toc-part-subtitle">What neuromorphic AI is, why energy and sparsity matter, the relationship to conventional deep learning, biological motivation, and the role of time.</p>
+</header>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">1</span><div><span class="toc-chapter-title">What Is Neuromorphic AI?</span><span class="toc-chapter-subtitle">Event-driven, sparse, temporal, energy-aware AI — and how to calibrate the "1000&times; efficiency" claim.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">2</span><div><span class="toc-chapter-title">The Computational Problem: Energy, Time, and Sparsity</span><span class="toc-chapter-subtitle">Why memory movement dominates cost; dense vs. sparse computation; the efficiency case for event-driven processing.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">3</span><div><span class="toc-chapter-title">The ANN-to-SNN Continuum</span><span class="toc-chapter-subtitle">How spiking networks relate to conventional deep learning; where the two frameworks converge and diverge.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">4</span><div><span class="toc-chapter-title">Biological Neurons — What We Borrow and Why</span><span class="toc-chapter-subtitle">Action potentials, synaptic transmission, dendritic computation; what neuroscience contributes and what it does not.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">5</span><div><span class="toc-chapter-title">Time as a First-Class Dimension</span><span class="toc-chapter-subtitle">Why timing matters: latency coding, temporal credit assignment, and the fundamental difference from frame-based AI.</span></div></div></li>
+</ol>
+</section>
+
+<!-- ── PART II ── -->
+<section class="toc-part" data-part="II" id="part-ii">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part II</span> <span class="toc-part-sep">&middot;</span> Mathematical Foundations of Neural Dynamics</h2>
+<span class="toc-part-count">Ch. 6 &middot; 1 chapter</span>
+<p class="toc-part-subtitle">The dynamical systems framework underlying all spiking neuron models.</p>
+</header>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">6</span><div><span class="toc-chapter-title">Dynamical Systems for Neural Computation</span><span class="toc-chapter-subtitle">Fixed points, stability, phase portraits, F-I curves, bifurcations, Wilson&ndash;Cowan equations, Fokker&ndash;Planck, and population-level models.</span></div></div></li>
+</ol>
+</section>
+
+<!-- ── PART III ── -->
+<section class="toc-part" data-part="III" id="part-iii">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part III</span> <span class="toc-part-sep">&middot;</span> Spiking Neuron Models</h2>
+<span class="toc-part-count">Ch. 7&ndash;11 &middot; 5 chapters</span>
+<p class="toc-part-subtitle">From the canonical LIF model through biophysically detailed neurons, synaptic dynamics, and stochastic spiking.</p>
+</header>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">7</span><div><span class="toc-chapter-title">The Leaky Integrate-and-Fire Neuron</span><span class="toc-chapter-subtitle">Membrane potential dynamics, threshold, reset, refractory period; from equation to PyTorch cell.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">8</span><div><span class="toc-chapter-title">Richer Neuron Models</span><span class="toc-chapter-subtitle">Hodgkin&ndash;Huxley, Izhikevich, AdEx, multi-compartment; expressiveness vs. computational cost.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">9</span><div><span class="toc-chapter-title">Synaptic Dynamics</span><span class="toc-chapter-subtitle">Conductance-based synapses, short-term plasticity, gap junctions, and their SNN implementations.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">10</span><div><span class="toc-chapter-title">Stochastic Spiking Networks and Noise</span><span class="toc-chapter-subtitle">Noise sources, stochastic LIF, probabilistic synapses, and noise as a computational resource.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">11</span><div><span class="toc-chapter-title">Spike-Train Statistics</span><span class="toc-chapter-subtitle">ISI distributions, Fano factor, correlation, variability; what makes a good spike train representation.</span></div></div></li>
+</ol>
+</section>
+
+<!-- ── PART IV ── -->
+<section class="toc-part" data-part="IV" id="part-iv">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part IV</span> <span class="toc-part-sep">&middot;</span> Neural Coding</h2>
+<span class="toc-part-count">Ch. 12&ndash;15 &middot; 4 chapters</span>
+<p class="toc-part-subtitle">How spikes represent information, and how to encode real-world data into spike trains.</p>
+</header>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">12</span><div><span class="toc-chapter-title">How Spikes Represent Information</span><span class="toc-chapter-subtitle">Rate, temporal, phase, and population coding — the four main strategies and their accuracy&ndash;latency&ndash;energy tradeoffs.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">13</span><div><span class="toc-chapter-title">Encoding Data into Spike Trains</span><span class="toc-chapter-subtitle">Rate encoding, latency encoding, delta modulation, and event-stream encoding for images, audio, and time-series data.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">14</span><div><span class="toc-chapter-title">Decoding Spike Trains</span><span class="toc-chapter-subtitle">Readout methods, population vector decoding, and connecting SNN output to downstream decisions.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">15</span><div><span class="toc-chapter-title">Sparse Coding and Predictive Coding</span><span class="toc-chapter-subtitle">Why sparsity is computationally efficient; local learning rules from predictive coding; bridge to Part VI.</span></div></div></li>
+</ol>
+</section>
+
+<!-- ── PART V ── -->
+<section class="toc-part" data-part="V" id="part-v">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part V</span> <span class="toc-part-sep">&middot;</span> Spiking Neural Network Architectures</h2>
+<span class="toc-part-count">Ch. 16&ndash;21, 64 &middot; 7 chapters</span>
+<p class="toc-part-subtitle">The structural vocabulary of SNNs: feedforward, recurrent, convolutional, reservoir, generative, graph, and hyperdimensional.</p>
+</header>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">16</span><div><span class="toc-chapter-title">Feedforward Spiking Neural Networks</span><span class="toc-chapter-subtitle">Layer-by-layer SNN classifiers; time-step unrolling; batch normalization for spikes.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">17</span><div><span class="toc-chapter-title">Recurrent Spiking Neural Networks</span><span class="toc-chapter-subtitle">LSTM-analogs, leaky integrators with feedback, memory in spike sequences, and exploding gradient anatomy.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">18</span><div><span class="toc-chapter-title">Convolutional Spiking Neural Networks</span><span class="toc-chapter-subtitle">Spiking CNNs for event-vision; weight sharing across time; efficient inference on DVS data.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">19</span><div><span class="toc-chapter-title">Reservoir Computing and Echo State Networks</span><span class="toc-chapter-subtitle">Fixed random recurrent dynamics; liquid state machines; why reservoirs suit hardware-constrained deployment.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">20</span><div><span class="toc-chapter-title">Generative and Unsupervised Spiking Models</span><span class="toc-chapter-subtitle">Spiking RBMs, Spiking VAEs, energy-based models with spike representations.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">21</span><div><span class="toc-chapter-title">Graph Spiking Neural Networks</span><span class="toc-chapter-subtitle">Message passing with spike timing; event-based graph processing for point clouds and sensor networks.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">64</span><div><span class="toc-chapter-title">Hyperdimensional Computing and Vector-Symbolic Architectures</span><span class="toc-chapter-subtitle">High-dimensional binary/bipolar representations; binding and bundling; HDC as a lightweight SNN alternative.</span></div></div></li>
+</ol>
+</section>
+
+<!-- ── PART VI ── -->
+<section class="toc-part" data-part="VI" id="part-vi">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part VI</span> <span class="toc-part-sep">&middot;</span> Learning in Spiking Neural Networks</h2>
+<span class="toc-part-count">Ch. 22&ndash;31, 65&ndash;67 &middot; 13 chapters</span>
+<p class="toc-part-subtitle">The full learning stack: why SNNs are hard to train, local plasticity rules, surrogate gradients, eligibility traces, ANN conversion, deep training, RL, continual learning, biologically plausible alternatives, compression, and deployment.</p>
+</header>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">22</span><div><span class="toc-chapter-title">Why Training SNNs Is Difficult</span><span class="toc-chapter-subtitle">Non-differentiability of spikes, vanishing gradient through time, dead neuron problem, and the training landscape.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">23</span><div><span class="toc-chapter-title">Spike-Timing-Dependent Plasticity (STDP)</span><span class="toc-chapter-subtitle">Hebbian learning in time; STDP variants; unsupervised feature learning; limits of pure STDP for classification.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">24</span><div><span class="toc-chapter-title">Supervised Spike-Timing Methods</span><span class="toc-chapter-subtitle">SpikeProp, Tempotron, ReSuMe — learning with exact spike times.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">25</span><div><span class="toc-chapter-title">Surrogate Gradient Learning</span><span class="toc-chapter-subtitle">Straight-through estimator, sigmoid surrogates, ArcTan, Fast Sigmoid; BPTT through time-steps; the standard training approach.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">26</span><div><span class="toc-chapter-title">Normalization in Spiking Networks</span><span class="toc-chapter-subtitle">Batch normalization for SNNs, threshold-dependent BN (tdBN), layer norm — stabilizing temporal training dynamics.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">27</span><div><span class="toc-chapter-title">ANN-to-SNN Conversion</span><span class="toc-chapter-subtitle">Weight rescaling, threshold balancing, conversion pipelines; accuracy-latency tradeoffs at various time-step budgets.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">28</span><div><span class="toc-chapter-title">Direct Training: Scaling Depth and Efficiency</span><span class="toc-chapter-subtitle">Deep surrogate-gradient training; TET baseline (83% DVS-CIFAR10); T-RevSNN reversible training (8.6&times; memory, 2&times; speed); ParaRevSNN.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">29</span><div><span class="toc-chapter-title">Online Learning and Eligibility Traces / e-prop</span><span class="toc-chapter-subtitle">Three-factor learning rules, eligibility traces, e-prop on SpiNNaker2; the online learning alternative to BPTT.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">30</span><div><span class="toc-chapter-title">Reinforcement Learning with Spiking Networks</span><span class="toc-chapter-subtitle">Reward-modulated STDP, spike-based actor&ndash;critic, neuromorphic RL for robotics.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">31</span><div><span class="toc-chapter-title">Continual Learning in Neuromorphic Systems</span><span class="toc-chapter-subtitle">Catastrophic forgetting, elastic weight consolidation for SNNs, federated neuromorphic learning.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">65</span><div><span class="toc-chapter-title">Biologically Plausible Learning Without Backpropagation</span><span class="toc-chapter-subtitle">Forward-forward algorithm, target propagation, contrastive Hebbian learning; what "no backprop" costs in accuracy.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">66</span><div><span class="toc-chapter-title">SNN Model Compression: Pruning and Quantization</span><span class="toc-chapter-subtitle">Structured and unstructured pruning for spiking models; binary and ternary weights; hardware-aware compression.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">67</span><div><span class="toc-chapter-title">SNN Deployment Pipeline: From Trained Model to Hardware</span><span class="toc-chapter-subtitle">Export via NIR, chip mapping, simulation-to-hardware gap, latency and energy profiling on real chips.</span></div></div></li>
+</ol>
+</section>
+
+<!-- ── PART VII ── -->
+<section class="toc-part" data-part="VII" id="part-vii">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part VII</span> <span class="toc-part-sep">&middot;</span> Neuromorphic Hardware</h2>
+<span class="toc-part-count">Ch. 32&ndash;38 &middot; 7 chapters</span>
+<p class="toc-part-subtitle">Why specialized hardware, and how it is built: digital chips, analog mixed-signal systems, memristive devices, address-event representation, FPGAs, and co-design.</p>
+</header>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">32</span><div><span class="toc-chapter-title">Why Neuromorphic Hardware Exists</span><span class="toc-chapter-subtitle">Von Neumann bottleneck, in-memory computing, event-driven circuits, and the energy argument.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">33</span><div><span class="toc-chapter-title">Digital Neuromorphic Chips</span><span class="toc-chapter-subtitle">Intel Loihi 2 (1M neurons, 120 MSOPS/mW); Hala Point (1.15B neurons, 128B synapses, 140K cores); SpiNNaker2 and SpiNNcloud commercial deployment (Sandia, Leipzig 2025); Innatera Pulsar; BrainChip Akida 2; IBM NorthPole; Lava SDK deprecation and successor landscape.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">34</span><div><span class="toc-chapter-title">Analog and Mixed-Signal Neuromorphic Systems</span><span class="toc-chapter-subtitle">BrainScaleS-2, DYNAP-SE2, SynSense Xylo/Speck; the mismatch problem and calibration strategies.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">35</span><div><span class="toc-chapter-title">Memristive and Non-Volatile Memory Devices</span><span class="toc-chapter-subtitle">PCM, RRAM, OTS synapses; in-memory learning; materials and reliability challenges.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">36</span><div><span class="toc-chapter-title">Address-Event Representation (AER)</span><span class="toc-chapter-subtitle">AER bus protocol, routing, spike routing in multi-chip systems, and on-chip network topologies.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">37</span><div><span class="toc-chapter-title">FPGA and Custom ASIC Implementations</span><span class="toc-chapter-subtitle">SNN on FPGAs (resource mapping, timing), neuromorphic ASICs, open-source hardware flows.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">38</span><div><span class="toc-chapter-title">Hardware&ndash;Software Co-Design</span><span class="toc-chapter-subtitle">Mapping SNN topology to chip constraints, routing-aware training, NIR as the co-design interface.</span></div></div></li>
+</ol>
+</section>
+
+<!-- ── PART VIII ── -->
+<section class="toc-part" data-part="VIII" id="part-viii">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part VIII</span> <span class="toc-part-sep">&middot;</span> Event-Based Sensing</h2>
+<span class="toc-part-count">Ch. 39&ndash;43 &middot; 5 chapters</span>
+<p class="toc-part-subtitle">Sensors that speak spike: event cameras, event-vision algorithms, stereo depth, neuromorphic audio, and tactile sensing.</p>
+</header>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">39</span><div><span class="toc-chapter-title">Event Cameras and Dynamic Vision Sensors</span><span class="toc-chapter-subtitle">DVS operating principle; Prophesee GenX320 and IMX636; OpenEB toolchain; SynSense Speck in-sensor SNN compute.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">40</span><div><span class="toc-chapter-title">Event-Vision Algorithms</span><span class="toc-chapter-subtitle">Detection and tracking: RVT &rarr; SAST &rarr; SMamba/PMRVT lineage; event representations; self-supervised pretraining (Masked Event Modeling, EASE) as open problem.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">41</span><div><span class="toc-chapter-title">Event-Based Stereo Vision and 3D Perception</span><span class="toc-chapter-subtitle">Stereo event cameras, DERD-Net (NeurIPS 2025: &ge;42% MAE reduction), depth estimation on MVSEC/DSEC.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">42</span><div><span class="toc-chapter-title">Neuromorphic Audio and Speech</span><span class="toc-chapter-subtitle">Silicon cochlea, event-based audio processing, Xylo audio SoC, keyword spotting and speech recognition with SNNs.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">43</span><div><span class="toc-chapter-title">Tactile and Multimodal Neuromorphic Sensing</span><span class="toc-chapter-subtitle">Event-based tactile sensors, sensor fusion across event modalities, and multimodal SNN architectures.</span></div></div></li>
+</ol>
+</section>
+
+<!-- ── PART IX ── -->
+<section class="toc-part" data-part="IX" id="part-ix">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part IX</span> <span class="toc-part-sep">&middot;</span> Neuromorphic AI Applications</h2>
+<span class="toc-part-count">Ch. 44&ndash;48, 68 &middot; 6 chapters</span>
+<p class="toc-part-subtitle">Where neuromorphic systems go to work: edge AI, robotics, biomedical, industrial, autonomous systems, and combinatorial optimization.</p>
+</header>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">44</span><div><span class="toc-chapter-title">Neuromorphic Edge AI</span><span class="toc-chapter-subtitle">Keyword spotting, anomaly detection, always-on sensing; the watt-milliwatt-microwatt hierarchy; TinyML vs. neuromorphic.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">45</span><div><span class="toc-chapter-title">Robotics and Autonomous Systems</span><span class="toc-chapter-subtitle">Event-camera SLAM, spiking motor control, reflex arcs, and neuromorphic perception-action loops.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">46</span><div><span class="toc-chapter-title">Biomedical Monitoring and Neural Interfaces</span><span class="toc-chapter-subtitle">Ultra-low-power biosignal processing, implantable SNN inference, brain&ndash;computer interfaces.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">47</span><div><span class="toc-chapter-title">Industrial IoT and Predictive Maintenance</span><span class="toc-chapter-subtitle">Vibration and acoustic anomaly detection with SNNs; always-on edge inference; event-based industrial sensing.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">48</span><div><span class="toc-chapter-title">Autonomous Vehicles and Drone Navigation</span><span class="toc-chapter-subtitle">High-speed obstacle avoidance with event cameras; low-latency optic-flow estimation; real deployments.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">68</span><div><span class="toc-chapter-title">Neuromorphic Computing for Combinatorial Optimization</span><span class="toc-chapter-subtitle">Ising machines, QUBO mapping, simulated annealing on neuromorphic hardware, benchmark comparison.</span></div></div></li>
+</ol>
+</section>
+
+<!-- ── PART X ── -->
+<section class="toc-part" data-part="X" id="part-x">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part X</span> <span class="toc-part-sep">&middot;</span> Hybrid Neuromorphic and Deep Learning Systems</h2>
+<span class="toc-part-count">Ch. 49&ndash;52 &middot; 4 chapters</span>
+<p class="toc-part-subtitle">Where SNNs and conventional deep learning meet: hybrid architectures, spiking Transformers, and spiking foundation models.</p>
+</header>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">49</span><div><span class="toc-chapter-title">ANN-SNN Hybrid Models</span><span class="toc-chapter-subtitle">ANN front-end with SNN temporal backend; Neural ODEs and Liquid Time-Constant networks as continuous-time hybrids.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">50</span><div><span class="toc-chapter-title">Spiking Transformers, Attention, and State Space Models</span><span class="toc-chapter-subtitle">SpikFormer &rarr; Spike-driven Transformer V3 (86.2% ImageNet top-1, T-PAMI 2025); QKFormer; SpikingSSMs (AAAI 2025); P-SpikeSSM; diagonal SSM on Loihi 2.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">51</span><div><span class="toc-chapter-title">Knowledge Distillation for SNNs</span><span class="toc-chapter-subtitle">Soft-target distillation from ANN teachers; feature-level alignment; closing the accuracy gap.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">52</span><div><span class="toc-chapter-title">Neuromorphic AI and Foundation Models</span><span class="toc-chapter-subtitle">SpikeLLM (ICLR 2025, 7&ndash;70B); SpikingBrain-7B/76B (&gt;100&times; TTFT speedup); SpikeMLLM (Apr 2026, 25.8&times; power efficiency); NSLLM, Darkit; BitNet b1.58 as quantization cousin.</span></div></div></li>
+</ol>
+</section>
+
+<!-- ── PART XI ── -->
+<section class="toc-part" data-part="XI" id="part-xi">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part XI</span> <span class="toc-part-sep">&middot;</span> Evaluation and Benchmarking</h2>
+<span class="toc-part-count">Ch. 53&ndash;56, 69 &middot; 5 chapters</span>
+<p class="toc-part-subtitle">Measuring what matters: metrics, benchmark standards, fair energy measurement, the accuracy gap, and explainability.</p>
+</header>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">53</span><div><span class="toc-chapter-title">Metrics for Neuromorphic AI</span><span class="toc-chapter-subtitle">Accuracy, latency, synaptic operations (SOP), energy-delay product; why single-metric comparison misleads.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">54</span><div><span class="toc-chapter-title">Datasets and Benchmarks</span><span class="toc-chapter-subtitle">DVS-CIFAR10, N-MNIST, N-Caltech, SHD, MVSEC, DSEC, ECMD, NSAVP; NeuroBench 2.3.0 (May 2026, Nature Comms 2025); Kudithipudi et al. Nature 637 roadmap.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">55</span><div><span class="toc-chapter-title">Fair Energy Measurement</span><span class="toc-chapter-subtitle">On-chip vs. system-level power; idle power accounting; apples-to-apples comparison methodology.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">56</span><div><span class="toc-chapter-title">Limitations of Neuromorphic AI</span><span class="toc-chapter-subtitle">The SNN&ndash;ANN accuracy gap; training instability; hardware fragmentation; when not to use SNNs.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">69</span><div><span class="toc-chapter-title">Explainability and Interpretability of SNNs</span><span class="toc-chapter-subtitle">Spike-based saliency, temporal attention visualization, causal analysis of spiking patterns.</span></div></div></li>
+</ol>
+</section>
+
+<!-- ── PART XII ── -->
+<section class="toc-part" data-part="XII" id="part-xii">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part XII</span> <span class="toc-part-sep">&middot;</span> Research Frontiers</h2>
+<span class="toc-part-count">Ch. 57&ndash;63 &middot; 7 chapters</span>
+<p class="toc-part-subtitle">The frontier: on-chip learning, scaling, neuroscience connections, security, theory, photonics, and future directions.</p>
+</header>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">57</span><div><span class="toc-chapter-title">On-Chip Learning</span><span class="toc-chapter-subtitle">Local learning rules that run on hardware; on-chip e-prop; spike-based online gradient descent.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">58</span><div><span class="toc-chapter-title">Scaling Neuromorphic Systems</span><span class="toc-chapter-subtitle">Multi-chip interconnects, wafer-scale integration, and what "scaling laws" mean for SNNs.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">59</span><div><span class="toc-chapter-title">Neuromorphic Computing and Computational Neuroscience</span><span class="toc-chapter-subtitle">Brain simulation, large-scale cortical models, what neuroscience predicts for hardware.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">60</span><div><span class="toc-chapter-title">Security and Robustness of Neuromorphic Systems</span><span class="toc-chapter-subtitle">Adversarial attacks on SNNs, hardware trojans, fault tolerance of spike-based computation.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">61</span><div><span class="toc-chapter-title">Theoretical Foundations</span><span class="toc-chapter-subtitle">Capacity of spiking networks, VC dimension for spike-timing codes, statistical learning theory for SNNs.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">62</span><div><span class="toc-chapter-title">Neuromorphic Photonics</span><span class="toc-chapter-subtitle">Optical spiking neurons, photonic integrated circuits for neuromorphic computing, light-speed synapses.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">63</span><div><span class="toc-chapter-title">The Future of Neuromorphic AI</span><span class="toc-chapter-subtitle">Open research questions, convergence with large-model AI, the path from edge sensor to autonomous agent.</span></div></div></li>
+</ol>
+</section>
+
+<!-- ── PART XIII ── -->
+<section class="toc-part" data-part="XIII" id="part-xiii">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part XIII</span> <span class="toc-part-sep">&middot;</span> The Neuromorphic AI Software Stack</h2>
+<span class="toc-part-count">Ch. 70&ndash;76 &middot; 7 chapters &middot; Practitioner spine</span>
+<p class="toc-part-subtitle">Framework selection, cross-backend interoperability via NIR, performance engineering, reproducible research, AI-assisted development, a recipe cookbook, and a full end-to-end capstone. Can be read first by practitioners.</p>
+</header>
+<p class="toc-part-note">&#9654; Practitioner reading path: start here, then pull from earlier parts on demand.</p>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">70</span><div><span class="toc-chapter-title">The Neuromorphic Software Ecosystem and Framework Selection</span><span class="toc-chapter-subtitle">snnTorch, Norse, Tonic, Rockpool, Sinabs, Spyx, Nengo — 2026 status, use-case map, and the "is this library dead?" checklist. Lava deprecation case study.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">71</span><div><span class="toc-chapter-title">Cross-Framework Interoperability with NIR</span><span class="toc-chapter-subtitle">Neuromorphic Intermediate Representation (Nature Comms 2024): graph model, read/write across snnTorch/Norse/Rockpool/Sinabs/Spyx/Nengo; hardware targets Loihi 2, SpiNNaker2, Speck, Xylo, BrainScaleS-2; round-trip fidelity recipe.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">72</span><div><span class="toc-chapter-title">Performance Engineering for SNN Training</span><span class="toc-chapter-subtitle">Time-axis vectorization, <code>torch.compile</code>, JAX <code>scan</code>, AMP, gradient checkpointing, <code>vmap</code>/functorch; T-RevSNN-style O(L) memory multi-GPU recipe; profiling methodology.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">73</span><div><span class="toc-chapter-title">Reproducible Research Engineering</span><span class="toc-chapter-subtitle">uv/pixi lockfiles, Hydra/OmegaConf configs, W&amp;B/MLflow/Aim tracking, DVC data versioning; <code>gradcheck</code>/<code>gradgradcheck</code> for surrogate correctness; Hypothesis property tests; NeurIPS reproducibility checklist.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">74</span><div><span class="toc-chapter-title">AI-Assisted Development ("Vibe Coding") for Neuromorphic Research</span><span class="toc-chapter-subtitle">LLM-assisted SNN coding workflow; reproducibility discipline (pin model+version, commit transcripts); Baltes et al. LLM Guidelines for SE (2025); verifying AI-generated numerical code with gradcheck.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">75</span><div><span class="toc-chapter-title">The Neuromorphic AI Cookbook</span><span class="toc-chapter-subtitle">Ten version-pinned, runnable recipes: LIF cell from scratch, surrogate-gradient classifier, ANN&rarr;SNN conversion, NIR round-trip, event-camera pipeline, edge deployment to Speck/Xylo, NeuroBench evaluation, and more.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">76</span><div><span class="toc-chapter-title">Capstone &mdash; Building a Neuromorphic AI System End-to-End</span><span class="toc-chapter-subtitle">Full pipeline: event sensor &rarr; spike encoding &rarr; SNN training (reproducible) &rarr; NIR export &rarr; hardware deployment &rarr; sim-to-hardware gap report.</span></div></div></li>
+</ol>
+</section>
+
+<!-- ── APPENDICES ── -->
+<section class="toc-part toc-capstone" id="appendices">
+<header class="toc-part-header">
+<h2 class="toc-part-title"><span class="toc-part-prefix">Appendices</span></h2>
+<span class="toc-part-count">5 appendices</span>
+</header>
+<ol class="toc-chapter-list">
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">A</span><div><span class="toc-chapter-title">Mathematical Foundations</span><span class="toc-chapter-subtitle">Linear algebra, probability, ODEs, and signal processing prerequisites.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">B</span><div><span class="toc-chapter-title">Deep Learning Essentials</span><span class="toc-chapter-subtitle">Backpropagation, BPTT, automatic differentiation, and the PyTorch computational graph.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">C</span><div><span class="toc-chapter-title">PyTorch and JAX for Neuromorphic AI</span><span class="toc-chapter-subtitle">Custom autograd Functions, <code>torch.compile</code>, JAX <code>scan</code>/<code>vmap</code>; uv/pixi environment setup for reproducible SNN stacks; pointers to Part XIII.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">D</span><div><span class="toc-chapter-title">Notation Reference</span><span class="toc-chapter-subtitle">Unified symbol table used throughout the book.</span></div></div></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">E</span><div><span class="toc-chapter-title">Glossary</span><span class="toc-chapter-subtitle">Key terms from spiking neurons to NIR, with chapter cross-references.</span></div></div></li>
+</ol>
+</section>
+
+</main>
+
+<footer style="text-align:center;padding:2rem 1.5rem;border-top:1px solid #e8ebf1;color:#8a93a3;font-size:0.9rem;">
+<p>&copy; 2026 Alexander Apartsin &amp; Yehudit Aperstein &middot; <a href="index.html" style="color:#4ecdc4;text-decoration:none;">Home</a></p>
+</footer>
+
+</body>
+</html>
